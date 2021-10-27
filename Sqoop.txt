@@ -1,0 +1,26 @@
+create database test;
+use test;
+create table customer (cust_id int primary key, name varchar(50), age int, country varchar(100));
+INSERT INTO customer VALUES(101,'John',25,'US');
+INSERT INTO customer VALUES(102,'Jack',35,'US');
+INSERT INTO customer VALUES(103,'Peter',28,'UK');
+INSERT INTO customer VALUES(104,'Katie',30,'US');
+INSERT INTO customer VALUES(105,'Daniel',22,'UK');
+INSERT INTO customer VALUES(106,'John',25,'US');
+INSERT INTO customer VALUES(107,'Jack',35,'US');
+INSERT INTO customer VALUES(108,'Peter',28,'UK');
+INSERT INTO customer VALUES(109,'Katie',30,'US');
+INSERT INTO customer VALUES(110,'Daniel',22,'UK');
+INSERT INTO customer VALUES(111,'John',25,'US');
+INSERT INTO customer VALUES(112,'Jack',35,'US');
+INSERT INTO customer VALUES(113,'Peter',28,'UK');
+INSERT INTO customer VALUES(114,'Katie',30,'US');
+INSERT INTO customer VALUES(115,'Daniel',22,'UK');
+INSERT INTO customer VALUES(116,'John',25,'US');
+INSERT INTO customer VALUES(117,'Jack',35,'US');
+INSERT INTO customer VALUES(118,'Peter',28,'UK');
+INSERT INTO customer VALUES(119,'Katie',30,'US');
+INSERT INTO customer VALUES(120,'Daniel',22,'UK');
+select * from customer;
+sqoop-import --connect jdbc:mysql://karthick.cxhwp5pqjufp.ap-south-1.rds.amazonaws.com/test --username karthick1808 -P  --table customer  --target-dir /customer
+sqoop-export --connect jdbc:mysql://karthick.cxhwp5pqjufp.ap-south-1.rds.amazonaws.com /test --username karthick1808  -P --table karthick --export-dir /customer/part*
