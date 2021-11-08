@@ -1,0 +1,15 @@
+create table salesrecord(
+                region varchar(255),
+                country varchar(255),
+                itemtype varchar(255),
+                sales_channel varchar(255),
+                order_priority varchar(255),
+                order_date timestamp,
+                order_id integer,
+                ship_date timestamp,
+                units_sold integer,
+                unit_price numeric(12,2),
+                unit_cost numeric(12,2),
+                total_revenue numeric(12,2),
+                total_cost numeric(12,2),
+                total_profit numeric(12,2));
